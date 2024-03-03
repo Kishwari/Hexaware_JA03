@@ -1,0 +1,15 @@
+<p>add-car works!</p>
+
+<form #formData="ngForm" (ngSubmit)="addCar(formData.value)">
+
+    Enter CAR ID : <input type="text" name="carId" ngModel> <br>
+    Enter MAKE : <input type="text" name="make" ngModel> <br>
+    Enter MODEL : <input type="text" name="model" ngModel> <br>
+    Enter LOCATION : <input type="text" name="location" ngModel> <br>
+    Enter DAILY RATE : <input type="text" name="dailyRate" ngModel> <br>
+    Enter CAR STATUS : <input type="text" name="carStatus" ngModel> <br>
+    Enter SPECIFICATION : <input type="text" name="specification" ngModel> <br>
+    Enter PASSENGER CAPACITY : <input type="text" name="passengerCapacity" ngModel> <br>
+    <button type="submit">Add Car</button>
+
+</form>

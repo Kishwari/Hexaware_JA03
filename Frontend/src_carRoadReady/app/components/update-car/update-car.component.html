@@ -1,0 +1,15 @@
+<p>update-car works!</p>
+
+<form #formData="ngForm" (ngSubmit)="updateCar(formData.value)">
+
+    Enter CAR ID : <input type="number" name="id" ngModel> <br>
+    Enter MAKE : <input type="text" name="make" ngModel> <br>
+    Enter MODEL : <input type="text" name="model" ngModel> <br>
+    Enter LOCATION : <input type="text" name="location" ngModel> <br>
+    Enter DAILY RATE : <input type="number" name="dailyRate" ngModel> <br>
+    Enter CAR STATUS : <input type="text" name="carStatus" ngModel> <br>
+    Enter SPECIFICATION : <input type="text" name="specification" ngModel> <br>
+    Enter PASSENGER CAPACITY : <input type="number" name="passengerCapacity" ngModel> <br>
+    <button type="submit">Update  Car</button>
+
+</form>

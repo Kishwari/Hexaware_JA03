@@ -1,0 +1,28 @@
+<p>delete-car works!</p>
+
+
+<div class="container col-md-4">
+    <table class="table table-dark">
+        <tr>
+            <th>ID</th>
+            <th>MAKE</th>
+            <th>MODEL</th>
+            <th>LOCATION</th>
+            <th>DAILY RATE</th>
+            <th>CAR STATUS</th>
+            <th>SPECIFICATION</th>
+            <th>PASSENGER CAPACITY</th>
+    </tr>
+        <tr *ngFor="let car of carList">
+            <td>{{car.carId}}</td>
+            <td>{{car.make}}</td>
+            <td>{{car.model}}</td>
+            <td>{{car.location}}</td>
+            <td>{{car.dailyRate}}</td>
+            <td>{{car.carStatus}}</td>
+            <td>{{car.specification}}</td>
+            <td>{{car.passengerCapacity}}</td>
+            <td><button type="button" class="btn btn-danger"   (click)="deleteById(car.carId)">Delete</button></td> 
+    </tr>
+        </table>
+    </div>

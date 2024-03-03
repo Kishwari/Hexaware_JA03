@@ -1,0 +1,38 @@
+<div class="alert alert-success">Login Form</div>
+<!--
+<button typle="button" class="btn btn-primary">Login</button>-->
+
+<form #loginForm="ngForm" (ngSubmit)="getFormData(loginForm)" class="container col-md-4" > <!--xs,s,lg . 1-12 col size to short length of input field-->
+
+<div >
+<label for="username">Enter username :</label>
+<input type="text" name="username" required class="form-control" ngModel #uid="ngModel"/><!--capturing object in uid variable-->
+<span  style="color:red" *ngIf="uid.touched && uid.invalid">Username is mandatory</span>
+</div>
+
+<div >
+    <label for="password">Enter Password :</label>
+    <input type="text" name="password" required class="form-control" ngModel #passid="ngModel"/>
+    <span  style="color:red" *ngIf="passid.touched && passid.invalid">Password is mandatory</span>
+
+</div>
+
+<div >
+    <label for="email">Enter Email :</label>
+    <input type="text" name="email" required class="form-control" ngModel #emailid="ngModel"/>
+    <span  style="color:red" *ngIf="emailid.touched && emailid.invalid">Email is mandatory</span>
+
+</div>
+
+<div >
+    <label for="address">Enter Address :</label>
+    <input type="text" name="address" required class="form-control" ngModel #addressid="ngModel"/>
+    <span  style="color:orange" *ngIf="addressid.touched && addressid.invalid">Address is required</span>
+
+</div>
+<button type="submit" class="btn btn-success" [disabled]="loginForm.invalid">Login</button>
+
+
+
+
+</form>

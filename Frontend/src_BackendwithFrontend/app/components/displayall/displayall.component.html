@@ -1,0 +1,29 @@
+<p>displayall works!</p>
+
+
+
+<!-- <button  type="button" class="btn btn-primary"  (click)="getAllEmployees()" >Display All Employeess</button> -->
+
+<div class="container">
+<table class="table table-primary col-sm-5">
+
+      <tr><th>S.NO.</th><th>CARID</th><th>MAKE</th><th>MODEL</th><th>LOCATION</th>
+            <th>DAILY RATE</th><th>CAR STATUS</th><th>SPECIFICATION</th><th>PASSENGER CAPACITY</th><th>DELETE</th>
+        </tr> 
+<tr *ngFor="let emp of empList; index as i">
+      <td>{{i+1}}</td> 
+      <td>{{car.id}}</td>
+      <td>{{car.make}}</td>
+      <td>{{car.model}}</td> 
+      <td>{{car.location}}</td>  
+      <td>{{car.dailyRate}}</td>
+      <td>{{car.carStatus}}</td>
+      <td>{{car.specification}}</td>
+      <td>{{car.passengerCapacity}}</td> 
+
+      <td><button type="button" class="btn btn-danger"  (click)="deleteById(emp.eid)" >Delete</button></td>
+
+</tr>
+
+</table>
+</div>

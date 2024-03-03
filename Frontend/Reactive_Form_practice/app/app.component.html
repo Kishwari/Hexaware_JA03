@@ -1,0 +1,41 @@
+
+
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="container col-lg-8">
+
+    <div class="form-group">
+<label>Employee First Name</label>
+<input type="text" formControlName="EmployeeFirstName" class="form-control" [ngClass]="{'is-invalid':submitted && f['EmployeeFirstName'].errors}">
+<div *ngIf="submitted && f['EmployeeFirstName'].errors" class="invalid-feedback"></div>
+<div style="color:red;" *ngIf="f['EmployeeFirstName'].errors?.['required']">EmployeeFirstName is required</div>
+</div>
+
+
+<div class="form-group">
+    <label>Employee  Last Name </label>
+    <input type="text" formControlName="EmployeeLastName" class="form-control" [ngClass]="{'is-invalid':submitted && f['EmployeeLastName'].errors}">
+    <div *ngIf="submitted && f['EmployeeLastName'].errors" class="invalid-feedback"></div>
+    <div style="color:red;" *ngIf="f['EmployeeLastName'].errors?.['required']">EmployeeLastName is required</div>
+    </div>
+
+    <div class="form-group">
+        <label>Email</label>
+        <input type="text" formControlName="email" class="form-control" [ngClass]="{'is-invalid':submitted && f['email'].errors}">
+        <div *ngIf="submitted && f['email'].errors" class="invalid-feedback"></div>
+        <div style="color:red;" *ngIf="f['email'].errors?.['required']">Email is required</div>
+        <div style="color:red;" *ngIf="f['email'].errors?.['email']">Email must be in email format</div>
+        </div>
+
+     <div class="form-group">
+            <label>Password</label>
+            <input type="text" formControlName="password" class="form-control" [ngClass]="{'is-invalid':submitted && f['password'].errors}" ngModel passid="ngModel">
+            <div *ngIf="submitted && f['password'].errors" class="invalid-feedback"></div>
+            <div style="color:red;" *ngIf="f['password'].errors?.['required']">Password is required</div>
+
+            </div>
+        
+    
+<button style="background-color:rgb(116, 215, 116)" type="submit" [disabled]="f['registerForm'].invalid">Register</button>
+
+
+
+</form>

@@ -1,0 +1,42 @@
+<p>Car-list works!</p>
+<h2>Car List</h2>
+<div class="container col-md-9">
+<form  (submit)="addCar()">
+
+    Enter CAR ID : <input type="text" placeholder="Add New ID" class="form-control" name="newid" [(ngModel)]="newid"> <br>
+    Enter MAKE : <input type="text" placeholder="Add New make" class="form-control" name="newmake" [(ngModel)]="newmake"> <br>
+    Enter MODEL : <input type="text" placeholder="Add New model" class="form-control" name="newmodel" [(ngModel)]="newmodel"> <br>
+    Enter LOCATION : <input type="text" placeholder="Add New location" class="form-control" name="newlocation" [(ngModel)]="newlocation"> <br>
+    Enter CAR STATUS : <input type="text" placeholder="Add New car status" class="form-control" name="newcarStatus" [(ngModel)]="newcarStatus"> <br>
+    Enter SPECIFICATION : <input type="text"  placeholder="Add New Specifications" class="form-control" name="newspecification" [(ngModel)]="newspecification"> <br>
+    
+<button type="submit" class="btn btn-success">Add</button>
+
+
+</form>
+
+<table class="table table-primary col-sm-9">
+
+      <tr><th>CARID</th><th>MAKE</th><th>MODEL</th><th>LOCATION</th>
+           <th>CAR STATUS</th><th>SPECIFICATION</th><th>DELETE</th>
+        </tr>
+
+
+
+    <tr *ngFor="let car of carsList">
+       
+        <td>{{car.id}}</td><td>{{car.make}}</td><td> {{car.model}}</td><td> {{car.location}}</td><td> {{car.carStatus}}</td> <td>{{car.specification}}</td>
+
+       <td> <button type="button" (click)="removeCar(car.id)" class="btn btn-danger">Remove</button></td>
+
+       <!-- <input type="checkbox"  [checked]="car.completed" (change)='toggleCar(car.specification)'>
+        <span [ngClass]="{completed: car.completed}">{{car.make}}</span>
+        <button type="button" (click)="removeCar(car.specification)" class="btn btn-danger">Remove</button>-->
+    
+    
+       </tr>
+
+
+</table>
+
+</div>

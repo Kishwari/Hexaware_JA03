@@ -1,0 +1,29 @@
+
+<h3>Cricket Management System</h3>
+
+<!--<button type="button"   (click)="getAllPlayers()" >Show All Players</button>-->
+<body>
+
+<div class="container  col-md-9">
+<table  class="table table-info">
+
+<thead>
+<tr><th>PLAYER ID</th><th>PLAYER NAME</th><th>JERSEY NUMBER</th>
+    <th>ROLE</th><th>TOTAL MATCHES</th><th>TEAM NAME</th>
+    <th>STATE NAME</th><th>DESCRIPTION</th><th>DELETE</th>
+</tr>
+</thead>
+
+<tr *ngFor="let player of  playerList">
+ <td>{{player.playerId}}</td><td>{{player.playerName}}</td><td>{{player.jerseyNumber}}</td> 
+ <td>{{player.role}}</td><td>{{player.totalMatches}}</td> 
+ <td>{{player.teamName}}</td><td>{{player.stateName}}</td> 
+ <td>{{player.description}}</td>
+ <td><button type="button" class="btn btn-danger"   (click)="deletePlayer(player.jerseyNumber)">Delete</button></td> 
+</tr>
+
+
+</table>
+
+</div>
+</body>

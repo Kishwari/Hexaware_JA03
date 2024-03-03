@@ -1,0 +1,7 @@
+<p>get-car works!</p>
+
+<button type="button" (click)="getAllCars()">Show all cars</button>
+<form #myform="ngForm">
+    <input type="text" name="carId">
+<button type="button" (click)="getCarById(myform.value)">Show car by id</button>
+</form>

@@ -1,0 +1,15 @@
+Welcome : {{username}}
+
+
+<form>
+
+  Oneway data binding: <input type="text" name="uname" [value]="username" /> <br>
+
+  Twoway data binding: <input type="text" name="uname" [(ngModel)]="username" /> <br>
+
+  <!--<img [src]="imageURL" alt="Car Image"> <br>-->
+
+  <button type="button" (click)="getData()">Get</button>
+
+
+</form>

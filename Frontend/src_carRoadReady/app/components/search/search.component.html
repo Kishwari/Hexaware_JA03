@@ -1,0 +1,29 @@
+<p>search works!</p>
+
+{{carSearchList[0]}}
+
+
+
+
+<div class="container">
+    <table class="table table-primary col-sm-5">
+    
+       <tr><th>S.NO.</th><th>CARID</th><th>MAKE</th><th>MODEL</th><th>LOCATION</th>
+          <th>DAILY RATE</th><th>CAR STATUS</th><th>SPECIFICATION</th><th>PASSENGER CAPACITY</th>
+      </tr> 
+    <tr *ngFor="let car of carSearchList; index as i">
+      <td>{{i+1}}</td> 
+      <td>{{car.carId}}</td>
+      <td>{{car.make}}</td>
+      <td>{{car.model}}</td> 
+      <td>{{car.location}}</td>  
+      <td>{{car.dailyRate}}</td>
+      <td>{{car.carStatus}}</td>
+      <td>{{car.specification}}</td>
+      <td>{{car.passengerCapacity}}</td>
+    
+        
+    </tr>
+    
+    </table>
+    </div>
