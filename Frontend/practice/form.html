@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Options</title>
+</head>
+
+<body>
+    <h1>Hello Friends fill up the form</h1>
+    <form  autocomplete="on">
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="fname"><br>
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname" name="lname"><br>
+        <label for="email">Email:</label><br>
+        <input type="text" id="email" name="email"><br>
+        <label for="pnumber">Phone Number:</label><br>
+        <input type="text" id="pnumber" name="pnumber"><br><br>
+
+        <label for="loc">Choose a location:</label>
+        <select id="loc" name="loc">
+          <option value="hyd">Hyderabad</option>
+          <option value="dlh" selected>Delhi</option>
+          <option value="pun">Pune</option>
+          <option value="ddn">Dehradun</option>
+        </select><br>
+
+        <input type="checkbox" id="trust" name="trust" value="Yes">
+        <label for="trust"> All details are valid</label><br>
+
+        <button input type="submit" value="Submit">Submit</button>
+    </form>
+
+</body>
+
+</html>

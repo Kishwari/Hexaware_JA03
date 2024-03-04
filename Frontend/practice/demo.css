@@ -1,0 +1,68 @@
+body {
+    background-color: rgb(238, 239, 199);
+    background-image: url("cat.jpeg");
+    background-repeat: no-repeat;
+    background-position: right top;
+}
+
+h1 {
+    color: rgb(96, 59, 14);
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-style: wavy;
+
+}
+
+#Q {
+    font-size: 20px;
+    color: brown;
+    border-color: rgb(149, 149, 228);
+    border-radius: 5px;
+
+}
+
+h3,
+h4 {
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 2px 2px red;
+}
+
+.last {
+    font-style: italic;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-right: 150px;
+    margin-left: 80px;
+}
+
+
+/* visited link */
+a:visited {
+    color: green;
+}
+
+/* mouse over link */
+a:hover {
+    color: hotpink;
+}
+
+/* selected link */
+a:active {
+    color: blue;
+}
+
+ul.vehicle {
+    list-style-type: square;
+
+}
+table, th, td {
+    border: 1px solid;
+  }
+  table {
+    width: 100%;
+  }
+  td {
+    text-align: center;
+  }
+  tr:hover {background-color: coral;}
